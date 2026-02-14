@@ -1,0 +1,22 @@
+[
+    {
+        "query": "What are the main components of the Transformer architecture?",
+        "ground_truth": "The Transformer architecture consists of an encoder and decoder stack, relying entirely on self-attention mechanisms instead of recurrence or convolutions. Key components include multi-head attention, position-wise feed-forward networks, layer normalization, residual connections, and positional encodings."
+    },
+    {
+        "query": "How does Contextual Retrieval improve RAG performance?",
+        "ground_truth": "Contextual Retrieval improves RAG by addressing the problem of lost context in chunking. Before embedding, an LLM generates a short context description for each chunk (e.g., explaining which document and section it comes from). This enriched context is prepended to the chunk, allowing vector search to find relevant information even when the chunk text alone is ambiguous. Anthropic reported a 49% reduction in retrieval failures with this technique."
+    },
+    {
+        "query": "Explain the concept of Semantic Chunking.",
+        "ground_truth": "Semantic chunking splits text based on meaning rather than fixed character counts. It uses embeddings to measure the semantic similarity between consecutive sentences. When the similarity drops below a threshold (indicating a topic shift), a new chunk is started. This ensures each chunk represents a coherent thought or topic."
+    },
+    {
+        "query": "What metrics does RAGAS use for evaluation?",
+        "ground_truth": "RAGAS uses four key metrics: Faithfulness (checking if the answer is grounded in the retrieved context), Answer Relevancy (checking if the answer ignores the question), Context Precision (checking if irrelevant chunks are retrieved), and Context Recall (checking if relevant information was missed)."
+    },
+    {
+        "query": "What is the difference between Scaled Dot-Product Attention and Multi-Head Attention?",
+        "ground_truth": "Scaled Dot-Product Attention is the core mechanism that computes attention scores using queries, keys, and values. Multi-Head Attention runs multiple Scaled Dot-Product Attention mechanisms in parallel (heads), allowing the model to jointly attend to information from different representation subspaces at different positions."
+    }
+]
